@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toDo 5pa</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Seu gestor de tarefas</h1>
+        <p>Não sabe o que fazer? Deixe seu computador decidir por você...</p>
+    </header>
+    <main>
+        <button disabled> O que devo fazer?</button>
+        <div>
+            <div>
+                <p><strong> Suas opções</strong></p>
+                <a href="">Remover todos</a>
+            </div>
+            <div>
+                <p>insira a primeira tarefa para começar...</p>
+            </div>
+            <form>
+                <input type="text" id="description">
+                <button type="button" onclick="incluir()">Incluir</button>
+            </form>
+        </div>
+        <div id="alert">
+            <p id="message"><strong id="message_type">tipo de Mensagem</strong> Mensagem para mostrar para o usúario</p>
+            <span class="closebtn">&times;</span>
+        </div>
+    </main>
+</body>
+
+</html>
