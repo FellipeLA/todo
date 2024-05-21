@@ -1,37 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt_br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>toDo 5pa</title>
+    <title>ToDo SPA</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>Seu gestor de tarefas</h1>
-        <p>Não sabe o que fazer? Deixe seu computador decidir por você...</p>
+        <h1>Seu Gestor de Tarefas Automático</h1>
+        <p>Não sabe o que fazer? Deixe seu computador decidir por vc....</p>
     </header>
     <main>
-        <button disabled> O que devo fazer?</button>
+        <button disabled>O que eu devo fazer?</button>
+
         <div>
             <div>
-                <p><strong> Suas opções</strong></p>
-                <a href="">Remover todos</a>
+                <p><strong>Suas Opções</strong></p>
+                <a id="butao" onclick="removeAll()"> Remover todos</a>
             </div>
-            <div>
-                <p>insira a primeira tarefa para começar...</p>
+            <div id="tasks">
+                <p>Insira a primeira tarefa para começar....</p>
             </div>
-            <form>
+            <form onsubmit="addTask(event)">
                 <input type="text" id="description">
-                <button type="button" onclick="incluir()">Incluir</button>
+                <button type="submit">Incluir</button>
             </form>
         </div>
+
         <div id="alert">
-            <p id="message"><strong id="message_type">tipo de Mensagem</strong> Mensagem para mostrar para o usúario</p>
+            <p>
+                <strong id="message_type">Tipo de Mensagem: </strong>
+                <span id="message">Mensagem para mostrar para o usuário.</span>
+            </p>
             <span class="closebtn" onclick="closeMessage()">&times;</span>
         </div>
     </main>
