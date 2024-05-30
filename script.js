@@ -1,5 +1,12 @@
 let taskList = [];
 
+function taskLoad(){
+    let list = localStorage.getItem('taskList');
+    taskList = list ? JSON.parse(list) : [];
+    updateTasks(); 
+}
+
+
 function addTask(event) {
     event.preventDefault();
     let description = document.getElementById('description');
@@ -7,6 +14,7 @@ function addTask(event) {
         showMessage();
     } else {
         taskList.push(description.value);
+        localStorage.setItem('taskList', JSON.stringify(taskList))
         description.value = '';
         updateTasks();
     }
@@ -50,5 +58,6 @@ function updateTasks() {
 
 function removeAll() {
     taskList = [];
+    localStorage.setItem('taskList', taskList)
     updateTasks();
 }
