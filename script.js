@@ -131,12 +131,13 @@ function filterTasks() {
             newLi.textContent = task.description;
 
             let completeButton = document.createElement('button');
-            completeButton.textContent = 'Concluir';
+            completeButton.textContent = 'FEITO!';
+            completeButton.className = 'complete-button';
             completeButton.onclick = () => toggleTaskCompletion(index);
             newLi.appendChild(completeButton);
 
             let deleteButton = document.createElement('button');
-            deleteButton.textContent = 'X';
+            deleteButton.textContent = 'Remover';
             deleteButton.className = 'delete-button';
             deleteButton.onclick = () => removeTask(index);
 
